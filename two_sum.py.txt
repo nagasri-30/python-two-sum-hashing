@@ -1,0 +1,15 @@
+numbers = [2, 7, 11, 15]
+target = 9
+
+seen = {}
+
+for i in range(len(numbers)):
+    complement = target - numbers[i]
+
+    if complement in seen:
+        print("Pair found:", complement, "+", numbers[i], "=", target)
+        break
+
+    seen[numbers[i]] = i
+else:
+    print("No pair found")
